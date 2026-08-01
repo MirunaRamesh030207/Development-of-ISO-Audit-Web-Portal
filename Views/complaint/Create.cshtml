@@ -1,0 +1,97 @@
+﻿@model PROJECT_CVRDE_FINAL.Models.Complaint
+
+@{
+    ViewData["Title"] = "Create Complaint";
+}
+
+<h2>Add New Complaint</h2>
+
+<hr />
+
+<form method="post" action="/Complaint/Create">
+
+    <table class="table">
+
+        <tr>
+            <td>Employee ID</td>
+            <td>
+                <input type="text" name="EmployeeID" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Department ID</td>
+            <td>
+                <input type="text" name="DepartmentID" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Complaint Description</td>
+            <td>
+                <textarea name="ComplaintDescription" rows="4" cols="40" class="form-control"></textarea>
+            </td>
+        </tr>
+
+        <!-- NEW COMPLAINT TYPE -->
+
+        <tr>
+            <td>Complaint Type</td>
+            <td>
+                <select name="ComplaintType" class="form-control">
+                    <option value="Computer Error">Computer Error</option>
+                    <option value="Network Error">Network Error</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Raised Date</td>
+            <td>
+                <input type="date" name="RaisedDate" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Expected Resolution Date</td>
+            <td>
+                <input type="date" name="ExpectedResolutionDate" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Status</td>
+            <td>
+                <select name="Status" class="form-control">
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Priority</td>
+            <td>
+                <select name="Priority" class="form-control">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Save Complaint" class="btn btn-primary" />
+
+                <a href="/Complaint/Index" class="btn btn-secondary">
+                    Back
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</form>

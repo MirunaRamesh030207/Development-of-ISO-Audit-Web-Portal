@@ -1,0 +1,168 @@
+﻿@model PROJECT_CVRDE_FINAL.Models.Complaint
+
+@{
+    ViewData["Title"] = "Edit Complaint";
+}
+
+<h2>Edit Complaint</h2>
+
+<form method="post" action="/Complaint/Edit">
+
+    <input type="hidden" name="ComplaintID" value="@Model.ComplaintID" />
+
+    <table class="table">
+
+        <tr>
+            <td>Employee ID</td>
+            <td>
+                <input type="text" name="EmployeeID" value="@Model.EmployeeID" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Department ID</td>
+            <td>
+                <input type="text" name="DepartmentID" value="@Model.DepartmentID" class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Complaint Description</td>
+            <td>
+                <textarea name="ComplaintDescription" class="form-control" rows="4">@Model.ComplaintDescription</textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Complaint Type</td>
+            <td>
+                <select name="ComplaintType" class="form-control">
+
+                    @if (Model.ComplaintType == "Computer Error")
+                    {
+                        <option value="Computer Error" selected>Computer Error</option>
+                    }
+                    else
+                    {
+                        <option value="Computer Error">Computer Error</option>
+                    }
+
+                    @if (Model.ComplaintType == "Network Error")
+                    {
+                        <option value="Network Error" selected>Network Error</option>
+                    }
+                    else
+                    {
+                        <option value="Network Error">Network Error</option>
+                    }
+
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Raised Date</td>
+            <td>
+                <input type="date"
+                       name="RaisedDate"
+                       value="@Model.RaisedDate.ToString("yyyy-MM-dd")"
+                       class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Expected Resolution Date</td>
+            <td>
+                <input type="date"
+                       name="ExpectedResolutionDate"
+                       value="@Model.ExpectedResolutionDate.ToString("yyyy-MM-dd")"
+                       class="form-control" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Status</td>
+            <td>
+                <select name="Status" class="form-control">
+
+                    @if (Model.Status == "Open")
+                    {
+                        <option value="Open" selected>Open</option>
+                    }
+                    else
+                    {
+                        <option value="Open">Open</option>
+                    }
+
+                    @if (Model.Status == "In Progress")
+                    {
+                        <option value="In Progress" selected>In Progress</option>
+                    }
+                    else
+                    {
+                        <option value="In Progress">In Progress</option>
+                    }
+
+                    @if (Model.Status == "Resolved")
+                    {
+                        <option value="Resolved" selected>Resolved</option>
+                    }
+                    else
+                    {
+                        <option value="Resolved">Resolved</option>
+                    }
+
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Priority</td>
+            <td>
+                <select name="Priority" class="form-control">
+
+                    @if (Model.Priority == "High")
+                    {
+                        <option value="High" selected>High</option>
+                    }
+                    else
+                    {
+                        <option value="High">High</option>
+                    }
+
+                    @if (Model.Priority == "Medium")
+                    {
+                        <option value="Medium" selected>Medium</option>
+                    }
+                    else
+                    {
+                        <option value="Medium">Medium</option>
+                    }
+
+                    @if (Model.Priority == "Low")
+                    {
+                        <option value="Low" selected>Low</option>
+                    }
+                    else
+                    {
+                        <option value="Low">Low</option>
+                    }
+
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Update Complaint" class="btn btn-success" />
+
+                <a href="/Complaint/Index" class="btn btn-secondary">
+                    Back
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</form>

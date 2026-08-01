@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Complaint Dashboard</h2>
+
+<hr />
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Total Complaints</th>
+        <td>@ViewBag.Total</td>
+    </tr>
+
+    <tr>
+        <th>Open Complaints</th>
+        <td>@ViewBag.Open</td>
+    </tr>
+
+    <tr>
+        <th>In Progress Complaints</th>
+        <td>@ViewBag.InProgress</td>
+    </tr>
+
+    <tr>
+        <th>Resolved Complaints</th>
+        <td>@ViewBag.Resolved</td>
+    </tr>
+
+    <tr>
+        <th>High Priority</th>
+        <td>@ViewBag.High</td>
+    </tr>
+
+    <tr>
+        <th>Medium Priority</th>
+        <td>@ViewBag.Medium</td>
+    </tr>
+
+    <tr>
+        <th>Low Priority</th>
+        <td>@ViewBag.Low</td>
+    </tr>
+
+</table>
+
+<hr />
+
+<div style="width:500px;">
+    <canvas id="statusChart"></canvas>
+</div>
+
+<br />
+<br />
+
+<div style="width:500px;">
+    <canvas id="priorityChart"></canvas>
+</div>
+
+<br />
+
+<a href="/Complaint/Index" class="btn btn-primary">
+    Back to Complaint List
+</a>
+
+<!-- Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const statusCtx = document.getElementById('statusChart').getContext('2d');
+    new Chart(statusCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Open', 'In Progress', 'Resolved'],
+            datasets: [{
+                data: [@ViewBag.Open, @ViewBag.InProgress, @ViewBag.Resolved],
+                backgroundColor: ['#e74c3c', '#f1c40f', '#2ecc71']
+            }]
+        }
+    });
+    const priorityCtx = document.getElementById('priorityChart').getContext('2d');
+    new Chart(priorityCtx, {
+        type: 'bar',
+        data: {
+            labels: ['High', 'Medium', 'Low'],
+            datasets: [{
+                label: 'Complaints by Priority',
+                data: [@ViewBag.High, @ViewBag.Medium, @ViewBag.Low],
+                backgroundColor: ['#e74c3c', '#f39c12', '#3498db']
+            }]
+        }
+    });
+</script>

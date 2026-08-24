@@ -1,167 +1,123 @@
-Development of ISO Audit Web Portal
+[![C#](https://img.shields.io/badge/C%23-ASP.NET%20Core-512BD4)](https://dotnet.microsoft.com/)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
+[![HTML](https://img.shields.io/badge/HTML-Frontend-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-Styling-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-purple)](https://getbootstrap.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-blue)](https://www.mysql.com/)
+[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-IDE-purple)](https://visualstudio.microsoft.com/)
 
-📌 Overview
+## ISO Audit Web Portal
 
-The Development of ISO Audit Web Portal is a web-based complaint and audit management system developed during my internship at CVRDE (Combat Vehicles Research & Development Establishment), DRDO.
+A web-based complaint and audit management system developed during my internship at Combat Vehicles Research & Development Establishment (CVRDE), DRDO. The application digitizes the process of managing ISO audit-related complaints by replacing manual reporting with a centralized platform.
 
-The portal digitizes the process of managing ISO audit complaints by replacing manual reporting with a centralized platform. It enables users to submit complaints, track their status, and allows administrators to efficiently monitor, manage, and resolve issues through an interactive dashboard.
+The portal enables users to register complaints, track complaint status, and manage submissions, while authorized administrators can monitor, update, resolve, and maintain complaint records through a centralized dashboard.
 
----
-
-🚀 Features
-
-- User Authentication and Authorization
-- Complaint Registration
-- Complaint Status Tracking
-- CRUD Operations (Create, Read, Update, Delete)
-- Role-Based Access Control
-- Admin Dashboard
-- Complaint Reports
-- Responsive User Interface
+This project was developed to improve my understanding of ASP.NET Core MVC, C#, Database Management, CRUD Operations, Role-Based Access Control, and Web Application Development.
 
 ---
 
-🛠️ Tech Stack
+Project Objectives
+
+* Digitize the ISO audit complaint management process.
+* Reduce manual documentation and paperwork.
+* Provide centralized complaint management.
+* Enable efficient complaint tracking and monitoring.
+* Improve workflow and administrative efficiency.
+* Maintain structured and organized records.
+
+Key Features
+
+* User Authentication and Authorization
+* Complaint Registration
+* Complaint Status Tracking
+* CRUD Operations
+* Role-Based Access Control
+* Admin Dashboard
+* Complaint Management
+* Complaint Reports
+* Responsive User Interface
+
+Technologies Used
 
 Frontend
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
+
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
 
 Backend
-- ASP.NET Core MVC
-- C#
+
+* C#
+* ASP.NET Core MVC
 
 Database
-- SQL Server / MySQL
 
-IDE
-- Visual Studio 2026
+* MySQL / SQL Server
 
----
+Development Environment
 
-📂 Project Structure
+* Visual Studio
 
-```
-Development-of-ISO-Audit-Web-Portal
-│
-├── Controllers/
-├── Models/
-├── Views/
-├── wwwroot/
-├── Properties/
-├── Database/
-│   └── ISO_Audit_Web_Portal.sql
-├── appsettings.json
-├── Program.cs
-├── PROJECT_CVRDE_FINAL.csproj
-└── README.md
-```
+Application Architecture
 
----
+The application follows the MVC (Model-View-Controller) architecture provided by ASP.NET Core MVC.
 
-⚙️ Installation
+'''
+                    USER
+                     |
+                     v
+              +-------------+
+              |    VIEW     |
+              | HTML / CSS  |
+              | JS /        |
+              | Bootstrap   |
+              +------+------+
+                     |
+                     v
+              +-------------+
+              | CONTROLLER  |
+              | ASP.NET     |
+              | Core MVC    |
+              +------+------+
+                     |
+                     v
+              +-------------+
+              |    MODEL    |
+              | Application |
+              |    Data     |
+              +------+------+
+                     |
+                     v
+              +-------------+
+              |  DATABASE   |
+              | MySQL / SQL |
+              |    Server   |
+              +-------------+
 
-1. Clone the Repository
 
-```bash
-git clone https://github.com/MirunaRamesh030207/Development-of-ISO-Audit-Web-Portal.git
-```
+## System Workflow
 
-2. Open the Project
+User → Login → Register Complaint → Track Status → Admin Review → Complaint Resolution → Record Maintenance
 
-Open the solution/project using Visual Studio 2026.
-
-3. Configure the Database
-
-- Open SQL Server Management Studio (or MySQL Workbench).
-- Create a new database.
-- Execute the SQL script located inside the Database folder.
-
-4. Configure Connection String
-
-Update the connection string inside:
-
-```
-appsettings.json
-```
-
-Example:
-
-```json
-"ConnectionStrings": {
-    "DefaultConnection": "Your Connection String"
-}
-```
-
-5. Run the Application
-
-Press F5 or click Start in Visual Studio.
-
----
-
-🗄️ Database
-
-The SQL script includes:
-
-- Database Creation
-- Table Creation
-- Primary Keys
-- Foreign Keys
-- Sample Data
-
-Location:
-
-```
-Database/ISO_Audit_Web_Portal.sql
-```
-
----
-
-📸 Screenshots
-
-You can add screenshots of:
-
-- Login Page
-- Dashboard
-- Complaint Registration
-- Complaint List
-- Complaint Details
-- Reports
-
-Store them inside:
-
-```
-Screenshots/
-```
-
----
-
-🎯 Project Objectives
-
-- Digitize ISO audit complaint management.
-- Improve complaint tracking.
-- Reduce manual documentation.
-- Increase workflow efficiency.
-- Provide centralized audit management.
-
----
-
-👨‍💻 Developed By
+Developers
 
 Miruna Ramesh
+
+
+
+GitHub: [MirunaRamesh030207](https://github.com/MirunaRamesh030207/)  
+LinkedIn: [Miruna Ramesh](https://www.linkedin.com/in/miruna-ramesh-780902326/)
+
 Monishaa S
 
-B.Tech Computer Science and Business Systems
 
-Panimalar Engineering College
 
-GitHub:
-https://github.com/MirunaRamesh030207
+GitHub: [MONISHAA-itachi](https://github.com/MONISHAA-itachi/)  
+LinkedIn: [Monisha](https://www.linkedin.com/in/monishaas/)
 
 ---
 
-📄 License
 
-This project was developed for educational and internship purposes.
+If you found this project helpful, consider giving this repository a Star ⭐.

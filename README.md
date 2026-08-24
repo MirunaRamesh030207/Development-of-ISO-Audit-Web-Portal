@@ -1,3 +1,13 @@
+[![C#](https://img.shields.io/badge/C%23-ASP.NET%20Core-512BD4)](https://dotnet.microsoft.com/)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
+[![HTML](https://img.shields.io/badge/HTML-Frontend-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-Styling-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-purple)](https://getbootstrap.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-blue)](https://www.mysql.com/)
+[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-IDE-purple)](https://visualstudio.microsoft.com/)
+
+
 Development of ISO Audit Web Portal
 
 A web-based complaint and audit management system developed during my internship at Combat Vehicles Research & Development Establishment (CVRDE), DRDO.

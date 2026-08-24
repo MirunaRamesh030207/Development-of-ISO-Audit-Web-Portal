@@ -1,123 +1,233 @@
-[![C#](https://img.shields.io/badge/C%23-ASP.NET%20Core-512BD4)](https://dotnet.microsoft.com/)
-[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
-[![HTML](https://img.shields.io/badge/HTML-Frontend-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS](https://img.shields.io/badge/CSS-Styling-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-purple)](https://getbootstrap.com/)
-[![MySQL](https://img.shields.io/badge/MySQL-Database-blue)](https://www.mysql.com/)
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-IDE-purple)](https://visualstudio.microsoft.com/)
+Development of ISO Audit Web Portal
 
-## ISO Audit Web Portal
+A web-based complaint and audit management system developed during my internship at Combat Vehicles Research & Development Establishment (CVRDE), DRDO.
 
-A web-based complaint and audit management system developed during my internship at Combat Vehicles Research & Development Establishment (CVRDE), DRDO. The application digitizes the process of managing ISO audit-related complaints by replacing manual reporting with a centralized platform.
+The system digitizes the process of reporting, tracking, managing, and resolving ISO-related complaints through a centralized web portal. It provides a structured workflow for users and administrators, reducing manual work and improving complaint monitoring.
 
-The portal enables users to register complaints, track complaint status, and manage submissions, while authorized administrators can monitor, update, resolve, and maintain complaint records through a centralized dashboard.
+Tech Stack
 
-This project was developed to improve my understanding of ASP.NET Core MVC, C#, Database Management, CRUD Operations, Role-Based Access Control, and Web Application Development.
+| Technology       | Purpose                   |
+| ---------------- | ------------------------- |
+| C#               | Backend programming       |
+| ASP.NET Core MVC | Web application framework |
+| HTML             | Page structure            |
+| CSS              | Styling                   |
+| JavaScript       | Client-side functionality |
+| Bootstrap        | Responsive UI             |
+| MySQL            | Database management       |
+| Visual Studio    | Development environment   |
 
----
+Features
 
-Project Objectives
+* User complaint submission
+* Complaint tracking and status management
+* Administrator dashboard
+* Complaint assignment and monitoring
+* Complaint resolution workflow
+* Database-driven complaint management
+* Responsive web interface
+* MVC-based application architecture
+* Centralized record management
 
-* Digitize the ISO audit complaint management process.
-* Reduce manual documentation and paperwork.
-* Provide centralized complaint management.
-* Enable efficient complaint tracking and monitoring.
-* Improve workflow and administrative efficiency.
-* Maintain structured and organized records.
+System Architecture
 
-Key Features
+```text
+                ISO Audit Web Portal
+                         |
+              +----------+----------+
+              |                     |
+            User                Administrator
+              |                     |
+       Submit Complaint       Manage Complaints
+              |                     |
+              +----------+----------+
+                         |
+                    ASP.NET Core MVC
+                         |
+              +----------+----------+
+              |                     |
+          Controllers            Models
+              |                     |
+              +----------+----------+
+                         |
+                       Views
+                         |
+                    MySQL Database
+```
 
-* User Authentication and Authorization
-* Complaint Registration
-* Complaint Status Tracking
-* CRUD Operations
-* Role-Based Access Control
-* Admin Dashboard
-* Complaint Management
-* Complaint Reports
-* Responsive User Interface
+Project Structure
 
-Technologies Used
-
-Frontend
-
-* HTML
-* CSS
-* JavaScript
-* Bootstrap
-
-Backend
-
-* C#
-* ASP.NET Core MVC
+```text
+Development-of-ISO-Audit-Web-Portal/
+│
+├── Controllers/
+│   └── Application Controllers
+│
+├── Models/
+│   └── Application Models
+│
+├── Views/
+│   └── Razor Views
+│
+├── Properties/
+│
+├── wwwroot/
+│   ├── css/
+│   ├── js/
+│   └── other static files
+│
+├── Program.cs
+├── appsettings.json
+├── appsettings.Development.json
+├── PROJECT_CVRDE_FINAL.csproj
+└── README.md
+```
 
 Database
 
-* MySQL / SQL Server
+The application uses MySQL for storing and managing application data.
 
-Development Environment
+The database is responsible for maintaining information related to:
 
-* Visual Studio
+* User details
+* Complaint records
+* Complaint status
+* Complaint tracking
+* Administrative information
+* Audit/issue management data
 
-Application Architecture
+Database Workflow
 
-The application follows the MVC (Model-View-Controller) architecture provided by ASP.NET Core MVC.
+```text
+User
+  |
+  | Submit Complaint
+  v
+Complaint Data
+  |
+  v
+MySQL Database
+  |
+  v
+Administrator
+  |
+  +---- Review
+  |
+  +---- Assign
+  |
+  +---- Update Status
+  |
+  +---- Resolve
+  |
+  v
+Updated Complaint Status
+```
 
-'''
-                    USER
-                     |
-                     v
-              +-------------+
-              |    VIEW     |
-              | HTML / CSS  |
-              | JS /        |
-              | Bootstrap   |
-              +------+------+
-                     |
-                     v
-              +-------------+
-              | CONTROLLER  |
-              | ASP.NET     |
-              | Core MVC    |
-              +------+------+
-                     |
-                     v
-              +-------------+
-              |    MODEL    |
-              | Application |
-              |    Data     |
-              +------+------+
-                     |
-                     v
-              +-------------+
-              |  DATABASE   |
-              | MySQL / SQL |
-              |    Server   |
-              +-------------+
+> The complete database schema, including tables, columns, relationships, and sample data, can be added to the repository as a `.sql` file.
 
+MVC Architecture
 
-## System Workflow
+The project follows the **Model-View-Controller (MVC)** architecture.
 
-User → Login → Register Complaint → Track Status → Admin Review → Complaint Resolution → Record Maintenance
+Model
 
-Developers
+Handles the application's data and database-related entities.
+
+View
+
+Provides the user interface using Razor Views, HTML, CSS, JavaScript, and Bootstrap.
+
+Controller
+
+Processes user requests, communicates with the models, and controls the application workflow.
+
+```text
+       User Request
+            |
+            v
+       Controller
+            |
+            v
+          Model
+            |
+            v
+      MySQL Database
+            |
+            v
+       Controller
+            |
+            v
+          View
+            |
+            v
+      User Interface
+```
+
+Installation and Setup
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/MirunaRamesh030207/Development-of-ISO-Audit-Web-Portal.git
+```
+
+2. Open the Project
+
+Open the `.csproj` file using **Visual Studio**.
+
+3. Configure the Database
+
+Create the required MySQL database and update the database connection string in:
+
+```text
+appsettings.json
+```
+
+Example:
+
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=ISOAuditDB;User=root;Password=your_password;"
+}
+```
+
+4. Restore Dependencies
+
+Restore the required NuGet packages through Visual Studio.
+
+5. Run the Application
+
+Build and run the project using Visual Studio.
+
+The application will open in the browser through the configured ASP.NET Core development server.
+
+Future Enhancements
+
+* Role-based access control
+* Email notifications for complaint updates
+* Advanced audit reports
+* Export reports to PDF/Excel
+* Complaint analytics and visualization
+* Automated reminder notifications
+* Improved dashboard analytics
+
+Project Outcome
+
+The ISO Audit Web Portal provides a centralized digital solution for managing ISO-related complaints and audit issues. It improves transparency, simplifies complaint tracking, and provides administrators with a structured workflow for monitoring and resolving issues.
+
+Developed During Internship
+
+Organization: Combat Vehicles Research & Development Establishment (CVRDE), DRDO
+
+Project: ISO Audit Web Portal
+
+Domain: Web Application Development
+
+Contributors
 
 Miruna Ramesh
-
-
-
-GitHub: [MirunaRamesh030207](https://github.com/MirunaRamesh030207/)  
-LinkedIn: [Miruna Ramesh](https://www.linkedin.com/in/miruna-ramesh-780902326/)
-
 Monishaa S
 
+License
 
-
-GitHub: [MONISHAA-itachi](https://github.com/MONISHAA-itachi/)  
-LinkedIn: [Monisha](https://www.linkedin.com/in/monishaas/)
-
----
-
-
-If you found this project helpful, consider giving this repository a Star ⭐.
+This project was developed as part of an internship project at CVRDE, DRDO.
